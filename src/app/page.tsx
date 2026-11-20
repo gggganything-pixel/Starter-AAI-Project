@@ -1,9 +1,9 @@
-// The default home page. Replace it when you build the app.
-export default function Home() {
-  return (
-    <main>
-      <h1>Budiman HRMS</h1>
-      <p>The project is set up and running. Nothing is built yet.</p>
-    </main>
-  );
+import { redirect } from "next/navigation";
+import { getSession, HOME } from "@/lib/session";
+
+// Decides between the login page and the role's home (design §4, `/`).
+export default async function Home() {
+  const session = await getSession();
+  if (session && HOME[session.role]) redirect(HOME[session.role]);
+  redirect("/login");
 }

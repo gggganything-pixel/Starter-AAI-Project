@@ -75,14 +75,14 @@ This module provides:
 
 | Status | ID | Check | How to test |
 |--------|----|-------|-------------|
-| To do | AC-01 | (U1) Each of the six demo accounts logs in and lands on its own role's home page | • Open the app<br>• Log in with each of the six demo emails + `password123`<br>• You should see `/employee`, `/supervisor`, `/hr`, `/admin` as appropriate |
-| To do | AC-02 | (U2) Wrong email and wrong password both show the same generic error | • Try a wrong password for a real email<br>• Try an unknown email with any password<br>• You should see "Invalid email or password" both times, nothing more specific |
-| To do | AC-03 | (U3) Role pages are blocked on the server, not just hidden | • As employee-1, open `/admin` directly → returned to own home, no admin data<br>• Logged out, open `/hr` → sent to `/login` |
-| To do | AC-04 | (U4) The session survives a browser restart and ends after 8 hours of use | • Log in, close and reopen the browser → still logged in<br>• With lifetime temporarily 1 minute, wait and click a page → back to `/login` |
-| To do | AC-05 | (U5) Logout clears the session everywhere | • Press Logout → `/login`<br>• Browser Back → no role data<br>• A fresh login works |
-| To do | AC-06 | (U6) An email is blocked for 5 minutes after 10 failed attempts | • Fail 10 logins for employee-1 → 11th attempt refused even with the right password<br>• Other accounts unaffected<br>• After 5 minutes it works again |
-| To do | AC-07 | (U7) The seed creates the six users with bcrypt hashes, never plain text | • Seed a fresh database and inspect the stored password column → values start with `$2b$`, never `password123`<br>• All six can log in |
-| To do | AC-08 | (U8) Admin add-user works and the OTP is shown once | • As admin, create `test-1@budiman.com` → OTP shown once<br>• Reload the page → OTP not shown again<br>• New account logs in with the OTP and reaches its role home |
+| Done | AC-01 | (U1) Each of the six demo accounts logs in and lands on its own role's home page | • Open the app<br>• Log in with each of the six demo emails + `password123`<br>• You should see `/employee`, `/supervisor`, `/hr`, `/admin` as appropriate |
+| Done | AC-02 | (U2) Wrong email and wrong password both show the same generic error | • Try a wrong password for a real email<br>• Try an unknown email with any password<br>• You should see "Invalid email or password" both times, nothing more specific |
+| Done | AC-03 | (U3) Role pages are blocked on the server, not just hidden | • As employee-1, open `/admin` directly → returned to own home, no admin data<br>• Logged out, open `/hr` → sent to `/login` |
+| Done | AC-04 | (U4) The session survives a browser restart and ends after 8 hours of use | • Log in, close and reopen the browser → still logged in<br>• With lifetime temporarily 1 minute, wait and click a page → back to `/login` |
+| Done | AC-05 | (U5) Logout clears the session everywhere | • Press Logout → `/login`<br>• Browser Back → no role data<br>• A fresh login works |
+| Done | AC-06 | (U6) An email is blocked for 5 minutes after 10 failed attempts | • Fail 10 logins for employee-1 → 11th attempt refused even with the right password<br>• Other accounts unaffected<br>• After 5 minutes it works again |
+| Done | AC-07 | (U7) The seed creates the six users with bcrypt hashes, never plain text | • Seed a fresh database and inspect the stored password column → values start with `$2b$`, never `password123`<br>• All six can log in |
+| Done | AC-08 | (U8) Admin add-user works and the OTP is shown once | • As admin, create `test-1@budiman.com` → OTP shown once<br>• Reload the page → OTP not shown again<br>• New account logs in with the OTP and reaches its role home |
 
 ## 5. Not included (for now)
 

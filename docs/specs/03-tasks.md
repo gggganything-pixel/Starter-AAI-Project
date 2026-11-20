@@ -9,16 +9,16 @@ Do Low only if time is left, and only if you ask.
 
 | Status | # | Task | Priority | Checks (from requirements §4) |
 |--------|---|------|----------|-------------------------------|
-| To do | 1 | Set up the database and the Users table | High | AC-07 |
-| To do | 2 | Add the six demo users (seed) | High | AC-07 |
-| To do | 3 | Log in and reach your role's home | High | AC-01 |
-| To do | 4 | Reject wrong logins with one generic error | High | AC-02 |
-| To do | 5 | Protect every page on the server | High | AC-03 |
-| To do | 6 | Keep the user logged in for 8 hours | High | AC-04 |
-| To do | 7 | Header with the name and a Logout button | High | AC-05 |
-| To do | 8 | Block password guessing (10 per 5 min) | High | AC-06 |
-| To do | 9 | Admin can add a user (Low extra) | Low | AC-08 |
-| To do | 10 | Full walkthrough against the specs | High | All ACs |
+| Done | 1 | Set up the database and the Users table | High | AC-07 |
+| Done | 2 | Add the six demo users (seed) | High | AC-07 |
+| Done | 3 | Log in and reach your role's home | High | AC-01 |
+| Done | 4 | Reject wrong logins with one generic error | High | AC-02 |
+| Done | 5 | Protect every page on the server | High | AC-03 |
+| Done | 6 | Keep the user logged in for 8 hours | High | AC-04 |
+| Done | 7 | Header with the name and a Logout button | High | AC-05 |
+| Done | 8 | Block password guessing (10 per 5 min) | High | AC-06 |
+| Done | 9 | Admin can add a user (Low extra) | Low | AC-08 |
+| Done | 10 | Full walkthrough against the specs | High | All ACs |
 
 ---
 

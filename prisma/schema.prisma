@@ -1,0 +1,23 @@
+// The User table is defined by docs/specs/02-design.md §1 (HRMS doc §7.2).
+// Change the spec first, then this file.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int      @id @default(autoincrement())
+  name         String
+  icNo         String   @unique
+  email        String   @unique
+  passwordHash String
+  role         String
+  division     String
+  designation  String
+  createdAt    DateTime @default(now())
+}
